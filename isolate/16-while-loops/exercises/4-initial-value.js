@@ -16,7 +16,7 @@
   how many can you find?
   what do all the correct answers have in common?
 */
-let sum = _;
+let sum = 2; // sum = 1 (alternatively) // RULE sum = 2 or sum = 2**n (n<7) || sum = 1 or sum = 2**n - 1 (n<7)
 
 while (sum < 100) {
 

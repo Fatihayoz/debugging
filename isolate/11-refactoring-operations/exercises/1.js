@@ -9,5 +9,5 @@ const result = typeof a === typeof b;
 console.log(result);
 
 {
-  // 1. _
+  // 1. false
 }

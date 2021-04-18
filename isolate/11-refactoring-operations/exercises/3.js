@@ -11,5 +11,7 @@ const result = Object.is(Number(a), Number(b));
 console.log(result);
 
 {
-  // 1. _
+  // Number(a)--> NaN
+  // Number(b)--> NaN
+  // 1. true
 }

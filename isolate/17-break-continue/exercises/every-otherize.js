@@ -4,19 +4,19 @@ const word = 'pitsicola';
 
 let index = 0;
 let logThisOne = true;
-while (index < word._) {
+while (index < word.length) {
 
   const nextLetter = word[index];
 
   index += 1;
   logThisOne = !logThisOne;
 
-  if (_) {
-    _;
+  if (index >= word.length + 1) {
+    break;
   }
 
   console.log(index + ': ' + nextLetter);
 
 }
 
-console.assert(index === _, 'there are this many letters in the word');
+console.assert(index === 9, 'there are this many letters in the word');

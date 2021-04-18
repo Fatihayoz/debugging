@@ -4,10 +4,15 @@
 // fill in the documentation to describe the function
 
 /**
- *
+ * concatinates three strings together
+ * @param {string} param1 
+ * @param {string} param2
+ * @param {string} param3
+ * @returns {string} the concantination of param1, param2 and param3
  */
-const scramble = () => {
-
+const scramble = (param1, param2, param3) => {
+  const result = param3 + param1 + param2;
+  return result;
 };
 
 const _1_expect = "yxz";

@@ -2,7 +2,7 @@
 
 // refactor this code to use a conditional instead of a ternary
 
-const isVegetarian = _;
+const isVegetarian = 'beans';
 console.log(isVegetarian);
 
 const favoriteFood = isVegetarian ? 'beans' : 'bacon';

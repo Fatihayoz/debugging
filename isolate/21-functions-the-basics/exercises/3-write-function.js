@@ -4,7 +4,9 @@
 // fill in the documentation to describe the function
 
 
-const scramble = () => {
+const scramble = (param1, param2, param3) => {
+  const result = param3 + param1 + param2;
+  return result;
 
 };
 

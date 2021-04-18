@@ -8,17 +8,17 @@ const value1 = _;
 const value2 = _;
 let path = '';
 
-if (value1 && !value2) {
+if (value1 && !value2) { // value1 = true, value2 = false
   path = 'if';
 
-} else if (!value1 || !value2) {
+} else if (!value1 || !value2) { // value1 = false, value2 = false/true
   path = 'else if 1';
 
-} else if (value2 && !value1) {
+} else if (value2 && !value1) { // unreachable path
   path = 'else if 2';
 
 } else {
-  path = 'else';
+  path = 'else'; // // value1 = true value2 = true
 }
 
 console.log(path);

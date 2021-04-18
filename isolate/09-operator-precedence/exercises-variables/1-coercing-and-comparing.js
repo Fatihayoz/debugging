@@ -14,17 +14,17 @@ console.assert(step0 === expected, 'Step 0');
 /*
 
 */
-const step1 = _;
+const step1 = !true;
 console.assert(step1 === expected, 'Step 1');
 
 /*
 
 */
-const step2 = _;
+const step2 = String(a) === String(b);
 console.assert(step2 === expected, 'Step 2');
 
 /*
 
 */
-const step3 = _;
+const step3 = Number (a) === Number(b);
 console.assert(step3 === expected, 'Step 3');

@@ -10,11 +10,24 @@
 */
 
 /**
- * ___
- * ___
- * ___
+ * reverses a string of text
+ * @param text {string} - the string of text to return
+ * @returns {string} reversed version of the original string
  */
 const reverse = (text = '') => {
+  let reversedText = '';
+  for (let i = text.length-1; i >= 0 ; i--) {
+    reversedText += text[i];
+  } return reversedText; 
+
+  /*
+  let reversedText = '';
+  let i = text.length-1;
+  while (i >= 0) {
+    reversedText += text[i];
+    i--;
+  } return reversedText;
+  */
 
 };
 

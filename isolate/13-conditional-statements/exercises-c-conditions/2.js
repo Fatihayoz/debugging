@@ -10,10 +10,10 @@ const value1 = null;
 const value2 = 400;
 let path = '';
 
-if (_) {
+if (value1) {
   path = 'if';
 
-} else if (_) {
+} else if (value2) {
   path = 'else if';
 
 } else {

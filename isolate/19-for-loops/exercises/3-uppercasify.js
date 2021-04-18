@@ -7,20 +7,40 @@
   this loop should create a new string with each character upper-cased
 
 */
+/*
+const lowerCaseString = 'abcde';
+console.log('lowerCaseString:', lowerCaseString);
+
+let upperCaseString = '';
+
+for (let i = 0; i < lowerCaseString.length; i++) {
+
+  const nextLetter = lowerCaseString[i];
+  const letterUpperCased = nextLetter.toUpperCase();
+  upperCaseString += letterUpperCased;
+
+  console.log(upperCaseString); // your stepper variable
+  console.log('upperCaseString:', upperCaseString);
+}
+
+console.assert(upperCaseString === 'ABCDE', 'upper case string is all upper case');
+*/
 
 const lowerCaseString = 'abcde';
 console.log('lowerCaseString:', lowerCaseString);
 
 let upperCaseString = '';
 
-for (_; _; _) {
+for (let i = 0; i < lowerCaseString.length; i++) {
 
-  const nextLetter = lowerCaseString[_];
-  const letterUpperCased = _._();
-  upperCaseString = _;
+  const nextLetter = lowerCaseString[i];
+  const letterUpperCased = nextLetter.toUpperCase();
+  upperCaseString += letterUpperCased;
 
-  console.log(_); // your stepper variable
+  console.log(i); // your stepper variable
   console.log('upperCaseString:', upperCaseString);
 }
 
 console.assert(upperCaseString === 'ABCDE', 'upper case string is all upper case');
+
+

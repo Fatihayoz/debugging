@@ -10,5 +10,5 @@ const result = (-a / b) * +c;
 console.log(result);
 
 {
-  // 1. _
+  // 1. (-a / b) * +c --> (-1/2)*3 --> -1.5
 }

@@ -9,5 +9,5 @@ const result = Boolean(a) !== Boolean(b);
 console.log(result);
 
 {
-  // 1. _
+  // 1. false
 }

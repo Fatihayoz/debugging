@@ -2,7 +2,7 @@
 // write arrays to pass the assertions
 
 const array1 = ['a', 'b', 'c', 'd'];
-const otherArray1 = _;
+const otherArray1 = ['c', 'd', 'b', 'a'];
 
 console.assert(otherArray1.length === 4, 'Test 1: length');
 console.assert(array1[2] === otherArray1[0], 'Test 1: a');
@@ -12,7 +12,7 @@ console.assert(array1[1] === otherArray1[2], 'Test 1: d');
 
 
 const array2 = [false, true, 0, 1, null];
-const otherArray2 = _;
+const otherArray2 = [1, 0, false, null, true];
 
 console.assert(otherArray2.length === 5, 'Test 2: length');
 console.assert(array2[2] === otherArray2[1], 'Test 2: a');
@@ -23,7 +23,7 @@ console.assert(array2[3] === otherArray2[0], 'Test 2: e');
 
 
 const array3 = ['a', 'b', 'c', 'd'];
-const otherArray3 = _;
+const otherArray3 = ['c', 'd', 'b', 'a'];
 // leave this code!
 otherArray3[1] = array3[2];
 otherArray3[0] = array3[3];

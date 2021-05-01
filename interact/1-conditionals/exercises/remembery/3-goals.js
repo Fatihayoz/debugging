@@ -23,21 +23,31 @@ while (input3 === '' || input3 === null) {
 
 alert('all saved! get ready to remember');
 
-const attempt = prompt('enter phrase number ', randomFrom1To3);
-
 const randomDecimal = Math.random();
 const decimalTimes3 = randomDecimal * 3;
-const randomFrom1To3 = Math.floor(decimalTimes3);
+const randomFrom1To3 = Math.ceil(decimalTimes3);
 
 let correctAnswer = '';
 if (randomFrom1To3 === 1) {
-  correctAnswer = option1;
+  correctAnswer = input1;
 } else if (randomFrom1To3 === 2) {
-  correctAnswer = option2;
+  correctAnswer = input2;
 } else if (randomFrom1To3 === 3) {
-  correctAnswer = option3;
+  correctAnswer = input3;
 }
 
 /* -- BEGIN: check if the user was correct and let them know -- */
+const attempt = 'Enter phrase number ' + randomFrom1To3;
+const userGuess = prompt(attempt);
+
+const guessIsCorrect = userGuess;
+
+if (guessIsCorrect) {
+  const successMessage = 'Correct! Phrase ' + randomFrom1To3 + ' was ' + '"' + correctAnswer + '"';
+  alert (successMessage); 
+} else {
+  const failMessage = 'Try again later :(';
+  alert (failMessage);
+}
 
 /* -- END: check if the user was correct and let them know -- */

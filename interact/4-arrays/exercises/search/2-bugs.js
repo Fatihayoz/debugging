@@ -19,13 +19,13 @@ then enter a search query (case in-sensitive)
 );
 
 // -- gather strings --
-const strings = '';
+const strings = [];
 let stillPushing = true;
-while (!stillPushing) {
+while (stillPushing) {
   const input = prompt('enter some or click "cancel"');
 
-  if ((input = null)) {
-    stillPushing = false;
+  if (input === null) {
+    break;
   } else if (input === '') {
     alert('nothing is not allowed');
     continue;
@@ -38,25 +38,25 @@ while (!stillPushing) {
 let query = null;
 while (query === null) {
   const input = prompt('enter a search query');
-  if (input === null) {
+  if (input !== null) {
     query = input.toLowerCase();
   }
 }
 
 // -- keep only strings that include the search query --
-const matches = [];
+let matches = [];
 for (const text of strings) {
   const lowerText = text.toLowerCase();
   if (lowerText.includes(query)) {
-    matches += text;
+    matches.push(text);
   }
 }
 
 // -- generate a message for the user --
 let message = `query: ${query}\nmatches: `;
-for (let i = 1; i <= matches.length; i++) {
+for (let i = 0; i < matches.length; i++) {
   const text = matches[i];
-  message = `${text}, `;
+  message += `${text}, `;
 }
 
 // -- alert the final message --

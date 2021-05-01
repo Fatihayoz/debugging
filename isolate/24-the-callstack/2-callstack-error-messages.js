@@ -37,7 +37,7 @@ func2();
 
 
 
-const func3 = () => {
+const func3 = () => {      // func2() --> func1() --> depth = 3 and error  
   console.log('entering func 3');
   depth++;
   func2();

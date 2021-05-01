@@ -23,27 +23,26 @@ while (true) {
   const input = prompt('enter the next number or "done"');
 
   // -- validate the input --
-  if (input === 'done') {
-    // -- check if the user is done --
-    break;
-  }
-
-  const nextNumber = Number(input);
   if (input === null || input === '') {
-    // -- check if the user input nothing --
-    alert('nothing is not allowed');
-  } else if (Number.isNaN(nextNumber)) {
-    // -- alert if input was not a number --
-    alert(`"${input}" is not a number`);
+    alert ('Nothing si not allowed');
+  // -- check if the user is done --
+  } else if (input === 'done') {
+    break;
   } else {
-    // -- push the input if it was a number --
-    numbers.pop(nextNumber);
+    const nextNumber = Number (input);
+  // -- alert if input was not a number --  
+    if (Number.isNaN(nextNumber)) {
+      alert (`"${input}" is not a number`);
+    } else {
+  // -- push the input if it was a number --
+      numbers.push(nextNumber);
+    }
   }
 }
 
 // -- calculate the sum --
 let sum = 0;
-for (let i = 0; i < numbers; i++) {
+for (let i = 0; i < numbers.length; i++) {
   const number = numbers[i];
   sum += number;
 }

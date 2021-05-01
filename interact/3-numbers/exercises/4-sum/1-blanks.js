@@ -16,10 +16,13 @@ while (true) {
   console.log('userInput:', typeof userInput, userInput);
 
   // make sure the user input something
-  ___;
+  if (userInput === '' || userInput === null) {
+    alert('Enter something');
+    continue;
+  };
 
   // check if the user input is "done", case-insensitive
-  if (_) {
+  if (userInput.toLowerCase() === 'done') {
     break;
   }
 
@@ -27,10 +30,13 @@ while (true) {
   console.log('nextNumber:', typeof nextNumber, nextNumber);
 
   // continue if the input is not a number
-  ___;
+  if (Number.isNaN(nextNumber)) {
+    alert('"' + userInput + '" is not a number, it has been ignored');
+    continue;
+  };
 
   // add the new number to the sum
-  _;
+  sum = sum + nextNumber;
   console.log('sum:', typeof sum, sum);
 }
 

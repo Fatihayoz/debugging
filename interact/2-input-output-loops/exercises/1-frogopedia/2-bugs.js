@@ -9,14 +9,14 @@
 
 let userInput = '';
 let inputIsAboutFrogs = true;
-while (!inputIsAboutFrogs) {
+while (inputIsAboutFrogs) {
   userInput = prompt('tell me something about frogs');
 
   if (inputIsAboutFrogs === '' && inputIsAboutFrogs === null) {
     alert('that is not something');
   }
   // regular expression: this works!
-  else if (/frog/i.test(userInput) === true) {
+  else if (/frog/i.test(userInput) === true) {    // tests if userInput has frog (case insensitive) in it.
     inputIsAboutFrogs = false;
   } else {
     alert('nope, not about frogs.  try again.');

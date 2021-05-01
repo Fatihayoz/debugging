@@ -22,30 +22,30 @@ while (!donePushing) {
   const input = prompt('enter the next phrase or press "cancel"');
 
   // -- validate the input --
-  if (input === _) {
+  if (input === null) {
     // -- check if the user is done --
-    donePushing = false;
-  } else if (input === _) {
+    donePushing = true;
+  } else if (input === '') {
     // -- check if the user input nothing --
     alert('nothing is not allowed');
   } else {
     // -- push the input --
-    _._(_);
+    allInputs.push(input);
   }
 }
 
 // -- allow the user to filter their inputs --
 const keepThese = [];
-for (let i = _; i < _; _) {
-  const keepIt = _(`do you want to keep "${text}"?`);
+for (let i = 0; i < allInputs.length; i++) {
+  const keepIt = confirm(`do you want to keep "${allInputs[i]}"?`);
   if (keepIt) {
-    keepThese.push(text);
+    keepThese.push(allInputs[i]);
   }
 }
 
 // -- build the final message --
 let message = '';
-for (const text of _) {
+for (const text of keepThese) {
   message += `- "${text}"\n`;
 }
 

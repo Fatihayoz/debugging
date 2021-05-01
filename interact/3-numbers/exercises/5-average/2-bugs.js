@@ -30,18 +30,20 @@ while (true) {
 
   if (userInput.toLowerCase() === 'done') {
     stillEnteringNumbers = false;
-  } else {
-    const nextNumber = Number(userInput);
+    break;
+  } 
+  
+  const nextNumber = Number(userInput);
 
-    if (Number.IsNaN(nextNumber)) {
-      alert('"' + userInput + '" is not a number, it has been ignored');
-      break;
-    }
-
-    sum = sum + nextNumber;
-
-    inputCount = inputCount + 1;
+  if (Number.isNaN(nextNumber)) {
+    alert('"' + userInput + '" is not a number, it has been ignored');
+    continue;
   }
+
+  sum = sum + nextNumber;
+
+  inputCount = inputCount + 1;
+
 }
 
 const average = sum / inputCount;

@@ -2,7 +2,7 @@
 
 // fill in the blank to pass the assertion
 
-const inputValue = _('asdf');
+const inputValue = prompt('asdf');
 
 console.log('inputValue:', typeof inputValue, inputValue);
 

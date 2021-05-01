@@ -22,15 +22,15 @@ while (true) {
   const input = prompt('enter a word or click "cancel"');
 
   if (input === null) {
-    continue;
+    break;
   } else if (input === '') {
     alert('nothing is not allowed');
   } else {
     const containsWhitespace = new RegExp('\\s', 'g').test(input);
     if (containsWhitespace) {
-      words.push(input);
-    } else {
       alert("words can't have white space");
+    } else {      
+      words.push(input);
     }
   }
 }
@@ -44,7 +44,7 @@ while (!isNumber) {
 
   if (input === '' || input === null) {
     alert('enter something');
-    break;
+    continue;
   }
 
   if (Number.isNaN(lengthToKeep)) {
@@ -56,15 +56,15 @@ while (!isNumber) {
 
 // -- keep only words with the right length --
 const keepThese = [];
-for (const word in words) {
+for (const word of words) {
   if (word.length === lengthToKeep) {
-    keepThese.push(word.length);
+    keepThese.push(word);
   }
 }
 
 // -- generate a message for the user --
 let message = `length: ${lengthToKeep}\nwords: `;
-for (const word in keepThese) {
+for (const word of keepThese) {
   message += `${word}, `;
 }
 

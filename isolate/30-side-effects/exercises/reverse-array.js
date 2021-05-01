@@ -4,7 +4,11 @@
  * reverses an array without modifying the parameter
  *
  */
-const reverseArray = (arr = [], index = 0) => {};
+const reverseArray = (arr = [], index = 0) => {
+  const copyArr = [...arr];
+  const reversedArray = copyArr.reverse();
+  return reversedArray;
+};
 
 const arr1 = [1, 2, 3];
 const arr2 = reverseArray(arr1, 'a');

@@ -36,13 +36,20 @@ while (true) {
 // -- allow the user to filter their inputs --
 const saved = [];
 /* == BEGIN: a loop for the user to filter their inputs == */
-
+for (let i = 0; i < strings.length; i++) {
+  const keepIt = confirm(`do you want to keep "${strings[i]}"?`);
+  if (keepIt) {
+    saved.push(strings[i]);
+  }
+}
 /* == END == */
 
 // -- build the final message --
 let message = '';
 /* == BEGIN: a loop to build the final message == */
-
+for (const text of saved) {
+  message += `- "${text}"\n`;
+}
 /* == END == */
 
 // -- alert the final message --

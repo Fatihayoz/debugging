@@ -30,13 +30,25 @@ while (!userConfirmed) {
       }
     }
     /* -- BEGIN: ask the user to confirm their string and shift number -- */
+    const confirmMessage = `Is this correct? ${userInput} and ${asciiShift}`;
+    userConfirmed = confirm(confirmMessage);
+
+    if (userConfirmed) {
+      break;
+    }
     /* -- END -- */
   }
 }
 
-let encodedString = '';
 
 /* -- BEGIN: create the encoded string -- */
+let encodedString = '';
+for (const character of userInput) {
+  const characterCode = character.charCodeAt();
+  const newCharCode = characterCode + asciiShift;
+  const encodedCharacter = String.fromCharCode(newCharCode);
+  encodedString += encodedCharacter;
+}
 /* -- END -- */
 
 const finalMessage = `"${userInput}" -> "${encodedString}"`;

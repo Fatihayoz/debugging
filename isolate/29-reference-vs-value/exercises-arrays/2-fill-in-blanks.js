@@ -4,8 +4,8 @@
 //  how many solutions can you find?
 // psst.  use JS Tutor & the debugger
 
-const array1 = _;
-const array2 = _;
+const array1 = [0];     // string
+const array2 = [0];     // string
 
 const test1 = array1 !== array2;
 console.assert(test1, 'Test 1');

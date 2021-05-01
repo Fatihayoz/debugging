@@ -17,10 +17,10 @@ while (true) {
   const input = prompt('enter some or click "cancel"');
 
   if (input === null) {
-    _;
+    break;
   } else if (input === '') {
     alert('nothing is not allowed');
-    _;
+    continue;
   }
 
   strings.push(input);
@@ -31,22 +31,22 @@ let query = null;
 while (query === null) {
   const input = prompt('enter a search query');
   if (input !== null) {
-    _ = input.toLowerCase();
+    query = input.toLowerCase();
   }
 }
 
 // -- keep only strings that include the search query --
 const matches = [];
 for (const text of strings) {
-  const lowerText = _.toLowerCase();
-  if (_.includes(_)) {
-    matches.push(_);
+  const lowerText = text.toLowerCase();
+  if (lowerText.includes(query)) {
+    matches.push(text);
   }
 }
 
 // -- generate a message for the user --
 let message = `query: ${query}\nmatches: `;
-for (const text of _) {
+for (const text of matches) {
   message += `${text}, `;
 }
 

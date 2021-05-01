@@ -14,27 +14,27 @@
 */
 
 const reverseArray1 = arr => {
-  return arr.reverse();
+  return arr.reverse(); // not pure
 };
 
 const reverseArray2 = arr => {
-  return [...arr].reverse();
+  return [...arr].reverse();  //Pure
 };
 
 const replaceEntry = (array, newValue) => {
-  const copy = [...array];
+  const copy = [...array];  //Pure
   copy[index] = newValue;
   return copy;
 };
 
 const removeEntry = (arr, index) => {
-  const copy = [...arr];
+  const copy = [...arr];  //not Pure
   arr.splice(index, 1);
   return copy;
 };
 
 const addEntry = (arr, index) => {
-  const copy = [...arr];
+  const copy = [...arr];        //Pure
   copy.splice(index, 1, newEntry);
   return copy;
 };

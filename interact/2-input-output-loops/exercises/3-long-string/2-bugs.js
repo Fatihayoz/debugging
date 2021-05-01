@@ -9,18 +9,23 @@
 
 */
 
-const userInput = '';
-const isLongEnough = false;
+let userInput = '';
+let isLongEnough = true;
 while (isLongEnough) {
   userInput = prompt('enter anything longer than 5 characters');
 
-  if (userInput !== null || userInput !== '') {
+  if (userInput === null || userInput === '') {
     alert('that is nothing');
-  } else if ((userInput.length = 5)) {
+    continue;
+  } 
+  
+  if (userInput.length <= 5) {
     alert('too short');
-  } else {
-    isLongEnough === true;
-  }
+    continue;
+  } 
+  
+  isLongEnough = false;
+  
 }
 
 const finalMessage =

@@ -9,19 +9,22 @@
 
 */
 
-const userNumber = NaN;
-while (Number.isNaN(userNumber)) {
+let userNumber = NaN;
+let userNumberisNaN = true;
+while (userNumberisNaN) {
   const userInput = prompt('enter a number');
 
-  if (userInput === '' && userInput === null) {
+  if (userInput === '' || userInput === null) {
     alert('enter something!');
-    break;
+    continue;
   }
 
-  userNumber = NaN(userInput);
+  userNumber = Number(userInput);
 
   if (Number.isNaN(userNumber)) {
-    alert('"', userInput, '" is not a number');
+    alert('"' + userInput + '" is not a number');
+  } else {
+    userNumberisNaN = false;
   }
 }
 

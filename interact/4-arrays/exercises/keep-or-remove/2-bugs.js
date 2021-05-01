@@ -18,9 +18,9 @@ When you're done entering strings press "cancel"`
 
 // -- gather user nextInput --
 const strings = [];
-let nextInput = '';
-while (nextInput === null) {
-  nextInput = prompt('enter the next phrase or press "cancel"');
+
+while (true) {
+  const nextInput = prompt('enter the next phrase or press "cancel"');
 
   // -- validate the nextInput --
   if (nextInput === '') {

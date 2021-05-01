@@ -25,39 +25,39 @@ while (true) {
   } else if (input === '') {
     alert('nothing is not allowed');
   } else {
-    const _ = new RegExp('\\s', 'g').test(input);
+    const containsWhitespace = new RegExp('\\s', 'g').test(input);
     if (containsWhitespace) {
       alert("words can't have white space");
     } else {
-      _._(_);
+      words.push(input);
     }
   }
 }
 
 // -- get the length to filter --
 let lengthToKeep;
-let isNumber = _;
+let isNumber = false;
 while (!isNumber) {
   const input = prompt('how long should the words be? enter a number:');
   lengthToKeep = Number(input);
 
   if (input === '' || input === null) {
     alert('enter something');
-    _;
+    continue;
   }
 
   if (Number.isNaN(lengthToKeep)) {
     alert(`"${input}" is not a number`);
   } else {
-    isNumber = _;
+    isNumber = true;
   }
 }
 
 // -- keep only words with the right length --
 const keepThese = [];
 for (const word of words) {
-  if (_ === _) {
-    _._(_);
+  if (word.length === lengthToKeep) {
+    keepThese.push(word);
   }
 }
 

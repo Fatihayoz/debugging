@@ -16,8 +16,28 @@ while (!isDone) {
   userInput = prompt('enter a number to add, or "done" to finish');
 
   /* -- BEGIN: handle user input - nothing, done, a number or not a number -- */
+  if (userInput === '' || userInput === null) {
+    alert('Enter something');
+    continue;
+  };
+
+  if (userInput.toLowerCase() === 'done') {
+    break;
+  }
+
+  const nextNumber = Number(userInput);
+
+  if (Number.isNaN(nextNumber)) {
+    alert('"' + userInput + '" is not a number, it has been ignored');
+    continue;
+  };
   /* -- END -- */
+
+  sum = sum + nextNumber;
+  
 }
+
+
 
 const sumMessage = 'the sum of your numbers is: ' + sum;
 alert(sumMessage);

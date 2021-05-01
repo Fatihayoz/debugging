@@ -6,14 +6,25 @@
   that there's special syntax to make it easier
 
 */
-
 let userInput = '';
-while (true) {
+let userConfirmed = false;
+while (!userConfirmed) {
   userInput = prompt('enter a word to filter:');
 
-  /* -- BEGIN: validate input -- */
+  if (userInput === '' || userInput === null) {
+    alert('nope, enter something');
+    continue;
+  }
 
-  /* -- END: validate input -- */
+  const whiteSpaceRegex = new RegExp('\\s', 'g');
+  if (whiteSpaceRegex.test(userInput)) {
+    alert("words can't have white space");
+    continue;
+  }
+
+  const confirmMessage =
+    'do you want to filter this word?\n\n' + '- "' + userInput + '"';
+  userConfirmed = confirm(confirmMessage);
 }
 
 const removeVowels = confirm(`what would you like to remove from "${userInput}"?
@@ -21,17 +32,15 @@ const removeVowels = confirm(`what would you like to remove from "${userInput}"?
 - cancel: consonants
 `);
 
-let toRemove = '';
-if (removeVowels) {
-  toRemove = 'AEIOU';
-} else {
-  toRemove = 'BCDFGHJKLMNPQRSTVWXYZ';
-}
+const toRemove = removeVowels ? 'aeiou' : 'bcdfghjklmnpqrstvwxyz';
 
 let filteredInput = '';
-/* -- BEGIN: filter input -- */
-
-/* -- END: filter input -- */
+for (const character of userInput) {
+  const lowerCaseCharacter = character.toLowerCase();
+  if (!toRemove.includes(lowerCaseCharacter)) {
+    filteredInput += character;
+  }
+}
 
 const finalMessage = `"${userInput}" -> "${filteredInput}"`;
 alert(finalMessage);

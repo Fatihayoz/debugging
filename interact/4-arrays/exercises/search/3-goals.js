@@ -10,22 +10,49 @@ then enter a search query (case in-sensitive)
 // -- gather strings --
 const strings = [];
 
-while (_) {
+while (true) {
   /* === BEGIN: gather text entries from the user == */
+
+  const input = prompt('enter some or click "cancel"');
+
+  if (input === null) {
+    break;
+  } else if (input === '') {
+    alert('nothing is not allowed');
+    continue;
+  }
+
+  strings.push(input);
+
+
   /* === END == */
 }
 
 // -- get search query --
 let query = null;
 
-while (_) {
+while (query === null) {
   /* === BEGIN: gather a lower-case query from the user == */
+
+  const input = prompt('enter a search query');
+  if (input !== null) {
+    query = input.toLowerCase();
+  }
+
   /* === END == */
 }
 
 // -- keep only strings that include the search query --
 const matches = [];
 /* === BEGIN: filter for text entries that include the query == */
+
+for (const text of strings) {
+  const lowerText = text.toLowerCase();
+  if (lowerText.includes(query)) {
+    matches.push(text);
+  }
+}
+
 /* === END == */
 
 // -- generate a message for the user --

@@ -4,8 +4,8 @@
 //  how many solutions can you find?
 // psst.  use JS Tutor & the debugger
 
-const object1 = _;
-const object2 = _;
+const object1 = {country: 'Belgium', city: 'Antwerpen'};   
+const object2 = {country: 'Belgium', city: 'Antwerpen'};   
 
 const test1 = object1 !== object2;
 console.assert(test1, 'Test 1');
